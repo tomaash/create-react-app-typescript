@@ -181,13 +181,11 @@ module.exports = {
               require.resolve('style-loader'),
               ({ resource }) => (
                 {
-                  loader: require.resolve('typings-for-css-modules-loader'),
+                  loader: require.resolve('css-loader'),
                   options: {
                     importLoaders: 1,
                     modules: /\.module\.css$/.test(resource),
-                    localIdentName: '[path][name]__[local]',
-                    namedExport: true,
-                    camelCase: true,
+                    localIdentName: '[path][name]__[local]'
                   },
                 }),
               {
